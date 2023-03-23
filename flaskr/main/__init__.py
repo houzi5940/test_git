@@ -3,11 +3,6 @@ from flask import Blueprint
  
 main = Blueprint('main', __name__)
 
-
-
-@main.route('/', methods =['GET', 'POST']) #不同的蓝本装饰器不同
-def  index():
-    return "hello,Main,word!"
-
+from . import test
 
  
