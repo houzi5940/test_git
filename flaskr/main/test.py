@@ -5,8 +5,8 @@ from flaskr.main import main
 # from .forms import NameForm
 # from .. import db
  
- 
-@main.route('/', methods =['GET', 'POST']) #不同的蓝本装饰器不同
+print(123)
+@main.route('/index') #不同的蓝本装饰器不同
 def  index():
     return "hello,Main,word!"
 
