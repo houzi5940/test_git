@@ -12,7 +12,7 @@ def addPerson():
     testjson=""
     if request.method=="POST":
         testjson:dict = request.get_json()
-        for key,value in testjson.items:
+        for key,value in testjson.items():
             try:
                 p = Person(
                     username = value['username']

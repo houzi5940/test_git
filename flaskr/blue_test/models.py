@@ -20,13 +20,6 @@ class BaseModel(db.Model):
 
 class Person(BaseModel):
     username=db.Column(db.String(32))
-    def save(self):
-        session=db.session()
-        session.add(self)
-        session.commit()
-        session=db.session()
-        session.commit()
-    def delete(self):
-        session=db.session()
-        session.delete(self)
-        session.commit()
+
+    def __repr__(self) -> str:
+        return "<Person %r>" % self.username
