@@ -27,7 +27,6 @@ def create_app(config_name = None):
     if config_name is None:
         app.config.from_object(config['development']) #可以直接把对象里面的配置数据转换到app.config里面
     else:
-        # load the test config if passed in
         app.config.from_object(config[config_name])
 
     # bootstrap.app_init(app)
@@ -44,7 +43,7 @@ def create_app(config_name = None):
     #路由和其他处理程序定义
     #...
     from .views import load_view
-    from flaskr.blue_test import models
+    # from flaskr.blue_test import models
     with app.app_context():
         db.create_all()
     load_view(app)
