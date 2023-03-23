@@ -6,7 +6,7 @@ import main
 # from .. import db
 # from ..models import User
  
- 
+print(123)
 @main.route('/index') #不同的蓝本装饰器不同
 def  index():
     return "hello,Main,word!"
